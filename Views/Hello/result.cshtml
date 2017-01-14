@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <div>
+    <h1> Submitted Info </h1>
+           @{
+               foreach(var Current in @ViewBag.infoList)
+               {
+                   <p>@Current.Key: @Current.Value</p>
+               }
+
+           }
+      </div>  
+      <form action = "/index" method= "get">
+      <input type="submit" value = "Go Back"</input>
+      </form>
+
+</body>
+</html>
